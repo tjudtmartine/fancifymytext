@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Fancify Shamcify</title>
+    <title>Fancify Shmancify</title>
 
-		<!-- link to your script file here -->
-		
+    <!-- link to your script file here -->
+	<script src="fancifymytext.js"></script>
+
+    <style>
+		fieldset {
+			padding: 10px;
+			margin-bottom: 15px;
+		}
+		legend {
+			font-weight: bold;
+			color: black;
+		}
+		button {
+			background-color: #4a90e2;
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			font-size: 1em;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+		button:hover {
+			background-color: #357abd;
+		}
+    </style>
 	</head>
 
 	<body>
-		<h1>Fancify my Text</h1>
-		
+    <h1>Fancify my Text</h1>
 
-		<!-- Your UI controls go here -->
-		
+    <!-- Field set for text input -->
+    <fieldset>
+		<legend>Text</legend>
+		<textarea id="textInput" rows="4" cols="30" placeholder="Enter your text here..."></textarea>
+    </fieldset>
+
+    <!-- Field set for fancify controls -->
+    <fieldset>
+		<legend>Fancify</legend>
+		<button onclick="showAlert()">Bigger!</button><br><br>
+		<button onclick="mooParse()">Moo</button><br><br>
+		<label>
+			<input onchange="fancyShmancy()" type="radio" name="fancy" value="FancyShmancy" /> FancyShmancy
+		</label>
+		<br>
+		<label>
+			<input onchange="boringBetty()" type="radio" name="fancy" value="BoringBetty" /> BoringBetty
+		</label>
+    </fieldset>
 	</body>
 </html>
